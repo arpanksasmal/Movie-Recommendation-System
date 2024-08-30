@@ -1,0 +1,84 @@
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0eafc; /* Light gradient background */
+    background-image: linear-gradient(315deg, #e0eafc 0%, #cfdef3 74%);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Heading styles */
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Form styling */
+form {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+/* Label styling */
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Select and button styling */
+select, input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Submit button styling */
+input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Section for recommended movies */
+h2 {
+    color: #555;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Flexbox container for movie posters */
+.flex-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Individual movie poster styling */
+.flex-item {
+    text-align: center;
+}
+
+.flex-item img {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

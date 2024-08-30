@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommender System</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Movie Recommender System</h1>
+    <form method="POST">
+        <label for="movie">Type or select a movie from the dropdown:</label><br>
+        <select name="movie" id="movie">
+            {% for movie in movie_list %}
+                <option value="{{ movie }}" {% if movie == selected_movie %}selected{% endif %}>{{ movie }}</option>
+            {% endfor %}
+        </select><br><br>
+        <input type="submit" value="Show Recommendation">
+    </form>
+
+    <!-- Recommendation Section -->
+    <h2>Recommended Movies:</h2>
+    <div class="flex-container">
+        {% if recommended %}
+            {% for name, poster in recommended %}
+                <div class="flex-item">
+                    <p>{{ name }}</p>
+                    <img src="{{ poster }}" alt="{{ name }}" width="200">
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>Select a movie and click "Show Recommendation" to see the recommendations here.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
