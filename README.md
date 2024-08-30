@@ -6,7 +6,7 @@ A Flask-based movie recommender system that suggests movies based on user input.
 ## Getting Started
 
 ### Prerequisites
-- Python 3.x
+- Python 3.12
 - pip
 
 ### Installation
